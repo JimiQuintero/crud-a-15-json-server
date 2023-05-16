@@ -1,0 +1,76 @@
+<!-- image section -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="image">
+        <img
+          class="img-fluid"
+          src="https://salestack.in/admin/api/uploads/Product//1660628686Qz8l94Ic.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <!--  Form section -->
+    <div class="col-md-6">
+      <div class="card">
+        <h5 class="card-title">Update Contact</h5>
+        <div class="row">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Name"
+                name="firtsname"
+                [(ngModel)]="contactdata.firtsname"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter LastName"
+                name="lastname"
+                [(ngModel)]="contactdata.lastname"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Enter phonenumber"
+                name="phonenumber"
+                [(ngModel)]="contactdata.phonenumber"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">City</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter City Name"
+                name="city"
+                [(ngModel)]="contactdata.city"
+              />
+            </div>
+            <div class="text-center mt-2">
+              <button type="submit" class="btn btn-primary" (click)="update()">
+                Update</button
+              >&nbsp;
+              <button
+                type="submit"
+                class="btn btn-success"
+                (click)="backToContactList()"
+              >
+                Back
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

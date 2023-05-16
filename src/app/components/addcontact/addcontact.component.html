@@ -1,0 +1,77 @@
+<!-- image section -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="image">
+        <img
+          class="img-fluid"
+          src="https://salestack.in/admin/api/uploads/Product//1660628686Qz8l94Ic.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <!--  Form section -->
+    <div class="col-md-6">
+      <div class="card">
+        <h5 class="card-title">Add Contact</h5>
+        <div class="row">
+          <form [formGroup]="contactform">
+            <div class="mb-3">
+              <label class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Name"
+                formControlName="firtsname"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter LastName"
+                formControlName="lastname"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Enter phonenumber"
+                formControlName="phonenumber"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">City</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter City Name"
+                formControlName="city"
+              />
+            </div>
+            <div class="text-center mt-2">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                (click)="submitContact(this.contactform.value)"
+                [disabled]="this.contactform.invalid"
+              >
+                Submit</button
+              >&nbsp;
+              <button
+                type="submit"
+                class="btn btn-success"
+                (click)="goToContactList()"
+              >
+                Back
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
